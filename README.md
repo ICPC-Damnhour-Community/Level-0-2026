@@ -5,7 +5,7 @@ Welcome to the **Level 0 Problem Solving Training**! This repository serves as t
 ## 🚀 Get Started
 
 All resources, weekly breakdowns, problem sheets, and training content are available in the **Wiki**.  
-Explore: [ICPC Damanhour - Level 0 Wiki]()
+Explore: [ICPC Damanhour - Level 0 Wiki](https://github.com/ICPC-Damnhour-Community/Level-0-2026/wiki)
 
 ## 📅 Training Timeline
 
