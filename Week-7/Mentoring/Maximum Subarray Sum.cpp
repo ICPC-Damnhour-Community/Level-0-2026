@@ -1,16 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main (){
-   int n ; cin >> n ;
-   int a[n];
-   for(int &i : a) cin >> i ;
-   long long sum = 0 , ans = INT_MIN;
-   for(int i = 0 ; i < n ; i++){
-       sum += a[i];
-       ans = max(ans , sum);
-       sum = max(sum , 0LL);
-       cerr << sum << endl;
+ 
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+ 
+    int n;
+    cin >>n;
+ 
+    long long a[n];
+    for(int i =0; i <n; i++)
+        cin >> a[i];
+ 
+    long long c_s=a[0];
+    long long m_s=a[0];
+ 
+    for(int i= 1;i<n;i++) {
+        c_s = max(a[i], c_s + a[i]);
+        m_s = max(m_s, c_s);
     }
-    cout << ans << endl;
+
+    cout << m_s << "\n";
     return 0;
 }
