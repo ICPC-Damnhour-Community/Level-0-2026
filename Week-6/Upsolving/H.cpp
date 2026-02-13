@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+using namespace std ;
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);
+#define endl "\n" 
+#define int long long
+#define ll long long
+#define str string
+
+ll FP(ll base , ll p ){
+    if (p == 1) {
+        return base ;
+    }
+    ll ans = FP(base , p/2) ;
+    if (p % 2 == 0){
+        return ans * ans ;
+    }
+    else {
+        return base * ans * ans ;
+    }
+    
+}
+
+// double x ;
+// cout <<fixed<< setprecision(9) << x  ;
+
+
+
+int32_t main () 
+{
+    fast 
+    int t ; cin >> t ;
+    while (t--) {
+        int n ; cin >> n ;
+        str s ; cin >> s ;
+        int mx = -1 ; char chmx = s[0] ;
+        for(char c = 'a' ; c <= 'z' ; c++) {
+            int cnt = count(s.begin() , s.end() , c) ;
+            if (cnt == 0) continue ;
+            if (mx < cnt ) {
+                mx = cnt ;
+                chmx = c ;
+            }
+        }
+        int mn = 11 ; char chmn = s[n-1] ;
+        for(char c = 'a' ; c <= 'z' ; c++) {
+            int cnt = count(s.begin() , s.end() , c) ;
+            if (cnt == 0) continue ;
+            if (mn > cnt && c != chmx ) {
+                mn = cnt ;
+                chmn = c ;
+            }
+        }
+        int in = find(s.begin() , s.end() , chmn) - s.begin();
+        s[in] = chmx ;
+        cout << s << endl ;
+    }
+    
+    
+    
+    
+    
+    
+    
+    return 0 ;
+}
