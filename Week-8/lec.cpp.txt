@@ -1,0 +1,292 @@
+#include<string>
+#include<iostream>
+#include<algorithm>
+using namespace std; 
+//
+//**Practice 1:**
+// time complexity
+
+void practice1(int n) {
+    int count = 0;
+    for (int i = 1; i <= n; i = i * 2) {
+        count++;
+    }
+    cout << count << endl;
+}
+// o(log n)  //ignore the constant
+
+
+//
+////** Practice 2:**
+//
+//
+void practice2(int n) {
+    for (int i = 0; i < n; i++) {
+        cout << i << " ";
+    }
+    cout << endl;
+    for (int j = 0; j < n; j++) {
+        cout << j << " ";
+    }
+
+} //o(n)
+//
+//
+////** Practice 3:**
+//
+void practice3(int n, int arr[]) {
+    for (int i = 0; i < n; i++) {
+        if (count(arr, arr + n, i) > 0) { //o(n)
+            cout << "Found " << i << endl;
+        }
+    }
+}  //o(n^2)
+//
+//
+////** Practice 4:**
+//
+void practice4(int n, int m) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout << i * j << " ";
+        }
+        cout << endl;
+    }
+}//o(n*m)
+
+//
+////** Practice 5:**
+//
+//
+void practice5(long long n) {
+    while (n > 2) {
+        n = sqrt(n);
+        cout << n << endl;
+    }
+}
+//o(log log n)
+//
+//
+////** Practice 6:**
+//
+//
+void practice6(int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j <= i; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+int  arr[100000000]; 
+
+int main()
+{
+    long long n;
+    cin >> n;
+	 cout << (n * (n + 1)) / 2 << endl;
+
+    //o(n)--->o(10^9)
+    //0.25 *10^8 ---->time limit
+    
+
+    ////////////////////////////
+    // meaning of operation
+    //int n; 
+    //cin >> n; //12 //n---> operation 
+    //  for (int i = 0; i < n; i++) {
+    //        cout << 1 << endl;
+    //}
+    
+    //cases
+    
+
+ //   int n;
+ //   cin >> n; //5
+ //   int arr[5]; 
+ //   for(int i=0;i<n;i++){
+ //       cin >> arr[i];
+ //   }
+
+	//for (int i = 0; i < n; i++) { //7 1 2 3 4---->best case smallest number of operation can do 1 
+ //       cout << 1 << endl;  // 1 2 7 3 4 ----->average case n/2 
+
+ //       if (arr[i] == 7) { // 1 2 3 4 7   ---->worst case--> biggest number of operation can do o(n)
+ //           cout << i << endl;
+ //           break;
+ //       }
+ //   }
+ //  
+ 
+	//  number of operation according to the input size n
+   
+       //o(1);
+
+    //int x = 5 + 10;
+    //bool found = 10 > 5; 
+    //if (10 > 5)
+    // cout << 1 << endl;
+
+
+
+
+   ////////////////////////////////// 
+   //4
+
+    //for (int i = 0; i < n; i++) { 
+
+    //    cout << i; 
+    //}
+    //o(n); --->o(10^9)
+
+    /////////////////////////////
+
+    //for (int i = 0; i < n; i++) {
+    //    for (int j = 0; j < n; j++) {
+    //        
+    //        cout << 1 << endl;
+    //    }
+    //} 
+    //o(n^2)
+
+    ///////////////////////////////
+    //int n;  //o(1);
+    //cin >> n; //o(1)
+    //for (int i = 0; i < 5*n; i++) {
+    //    for (int j = 0; j < 20*n; j++) {
+    //        cout << i * j;
+    //    }
+    //}
+  //  o(5*n*20*n)--->o(n^2)  //ignore the constant
+   //     o(1+1+100*n^2)-->o(n^2)
+    
+    ////////////////////////////
+    //
+    //for (int i = 0; i < n; i++) {
+    //    for (int j = 0; j < n; j++) {
+    //        for (int k = 0; k < 1000; k++) {
+    //            cout << i*j; 
+    //        }
+    //    }
+    //}
+    //o(n*n*1000)--->o(n^2)
+
+    
+    ////////////////////////////////
+    
+    //int x = 5 + 10; //o(1)
+
+
+   
+    //for (int i = 0; i < n; i++) { cout << i; } //o(n)
+
+    //
+    //for (int i = 0; i < n; i++)  {//o(n^2)
+    //    for (int j = 0; j < n; j++) {
+    //        cout << i * j;
+    //    }
+    //}
+	// o(1+n+n^2)--> o(n+n^2)-->o(n^2)
+   // o(n^2+n^3)-->o(n^3)    //1000+10^6 ---->10^6
+    //////////////////////////
+
+    //  int x = 5 + 10; //o(1)
+
+
+    //for (int i = 0; i < n; i++) { 
+    //    for (int i = 0; i < n; i++) {
+    //        cout << i;
+    //    }
+    //} //o(n^2)
+
+    ////
+    //for (int i = 0; i < n; i++) {
+    //    for (int j = 0; j < m; j++) {
+    //        cout << i * j;
+    //    }
+    //}
+    //o(n*m)
+    //o(1+n^2+n*m)---o(n^2+n*m)  
+
+
+    ////////////////////////////////////////////
+
+ //   for (int i = 0; i < n; i+=2) {
+ //         
+ //           cout << i ;
+ //       }
+	//o(n / 2)-- > o(n)  //ignore the constant)---`
+
+
+    //////////////////////////////////////
+
+
+   // while (n > 0) {
+   //     cout << 1 << endl;
+   //     n /=2;
+   //    
+   // }
+	  //o(log n)  //ignore the constant
+
+    ////////////////////////////////
+
+    //    for (int i = 0; i < n; i++) {
+    //    for (int j = 0; j < n; j++) {
+    //        for (int i = 0; i < n; i++) {
+    //            cout << i * j;
+    //        }
+    //    }
+    //}
+
+        //o(n^3)  //ignore the
+    ////////////////////////////////
+
+	//sort(arr, arr + n); //o(nlog n)
+
+    //o(2^n) -->recursion 
+
+	//o(n!)  -->permutation  //brute force
+
+ ////////////////////////////////////////
+int count = 0;
+
+//while (n > 1) {
+//    n = log2(n);
+//    cout << 1
+//};
+//o(loglogn)
+
+//
+//
+//for (int i = 0; i < n; i++) {
+//    for(int j=i+1;j<n;j++){
+//
+//        ///////////////
+//    
+//    }
+//}
+//o(n*(n-1)/2)---o(n^2-n)---o(n^2)
+
+int a = 10;// o(1)
+
+ //o(n);
+
+//2 ---->4
+//int arr[100000]; //o(4*10^6) 4MB --->stack overflow
+
+//int arr[n][n]; //o(n ^ 2);
+
+//int arr[10000][10000]; //o(10^8^4)--->400*10^6--->400MB --->stackoverflow
+
+//local array --->جوا main &&stack 10^5 and global array ---->برا main datasegment  حسب Ram 10^8
+
+
+//int arr[1000000];//10^6 stack overflow
+
+
+
+
+
+    return 0;
+}
